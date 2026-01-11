@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Joaillerie | Premium Jewelry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Exquisite gold and diamond jewelry for every occasion. Shop our premium collection of rings, necklaces, and earrings.">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">LUMIÈRE</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Timeless Elegance</h1>
+            <p>Discover our exclusive collection of hand-crafted gold and diamond jewelry.</p>
+            <a href="#shop" class="btn">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="shop" class="products">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be injected here by JS -->
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="assets/necklace.png" alt="About Lumière">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left;">Our Story</h2>
+                <p>Founded in 2026, Lumière Joaillerie was born from a passion for beauty and excellence in craftsmanship.</p>
+                <p>We believe that jewelry is more than just an accessory; it is an expression of personality, a marker of memory, and a symbol of love. Our artisans work tirelessly to create pieces that are not only visually stunning but also endure the test of time.</p>
+                <p>Every diamond is hand-selected, and every setting is precision-engineered to ensure that your Lumière piece shines as brightly as you do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>123 Diamond Avenue, Jewelry District<br>New York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>concierge@lumiere.com</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleContact(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="color: #fff; margin-bottom: 20px;">LUMIÈRE</div>
+            <p style="margin-bottom: 20px;">Elevating beauty with every carat.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Lumière Joaillerie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart Items will be here -->
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
